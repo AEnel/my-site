@@ -1,0 +1,198 @@
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #222;
+    --header-bg: #3f51b5;
+    --header-text: #fff;
+    --accent-color: #ff4081;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1f1f1f;
+    --header-text: #bb86fc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    transition: 0.3s;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 15px 50px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--header-text);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+/* ФОТО ПРО МЕНЕ (Праворуч) */
+.profile-pic {
+    float: right;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ФІЛЬМИ (Картинки) */
+/* ФІЛЬМИ (В одну лінію, однаковий розмір) */
+.movie-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap; /* Суворо забороняємо перенесення на новий рядок */
+    justify-content: center;
+    overflow-x: auto; /* Додає горизонтальну прокрутку на мобільних телефонах */
+    padding-bottom: 15px; /* Місце для можливої смуги прокрутки */
+}
+
+/* Щоб посилання не стискалися, коли мало місця */
+.movie-grid a {
+    flex: 0 0 auto; 
+}
+
+.movie-grid img {
+    width: 170px;  /* Фіксована ширина для всіх фото */
+    height: 250px; /* Фіксована висота для всіх фото */
+    object-fit: cover; /* Магія: картинки заповнять задані розміри без розтягування/сплющування */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.movie-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ЦИТАТА (По центру) */
+.centered-quote {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 40px 0;
+}
+
+.centered-quote a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* СЛАЙДЕР */
+#slide-image {
+    width: 100%;       /* Фото займає всю ширину контейнера */
+    height: 450px;     /* Жорстко фіксуємо висоту для всіх фото */
+    object-fit: cover;  /* Магія: фото акуратно обрізається, щоб заповнити рамку, не сплющуючись */
+    border-radius: 12px; /* Трохи заокруглені кути */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для ефекту "картки" */
+}
+
+.slide-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slide-controls button {
+    padding: 10px 25px;
+    cursor: pointer;
+    background: var(--header-bg);
+    color: var(--header-text);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+}
+
+/* МОЇ НАСТРОЇ (3 в одну лінію) */
+.mood-gallery {
+    display: flex;
+    gap: 20px; /* Відстань між фотографіями */
+    flex-wrap: nowrap; /* Суворо забороняємо перенесення на новий рядок */
+    justify-content: center; /* Вирівнюємо всі 3 фото по центру сторінки */
+    overflow-x: auto; /* Для зручності на мобільних екранах */
+    padding-bottom: 15px;
+}
+
+/* Щоб блоки з текстом і фото не стискалися */
+.mood-item {
+    text-align: center;
+    flex: 0 0 auto; 
+}
+
+/* Налаштування самих картинок настрою */
+.mood-item img {
+    width: 200px;  /* Ширина фото настрою */
+    height: 250px; /* Висота (можете змінити на 200px, якщо хочете квадратні) */
+    object-fit: cover; /* Обрізає зайве, не розтягуючи саме фото */
+    border-radius: 8px; /* Заокруглені кути, як у фільмів */
+    transition: transform 0.3s; /* Плавність для анімації */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легка тінь для краси */
+}
+
+/* Ефект збільшення при наведенні мишкою (як у фільмах) */
+.mood-item img:hover {
+    transform: scale(1.05);
+}
+
+.project-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+.project-box img {
+      width: 100%;
+      border-radius: 12px;
+    }

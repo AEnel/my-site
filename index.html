@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя особиста сторінка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Моя особиста сторінка</h1>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider-text">Темна тема</span>
+            </label>
+        </div>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="project.html">Мій проект</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="personal-info clearfix">
+            <img src="images/my-photo.jpg" alt="Моє фото" class="profile-pic">
+            <h2>Про мене</h2>
+            <p><strong>Ім'я:</strong> Артем Полупан</p>
+            <p><strong>Email:</strong> <a href="mailto:Artem.Polupan@infiz.khpi.edu.ua"> Artem.Polupan@infiz.khpi.edu.ua </a> </p>                
+            <p><strong>3 слова про мене:</strong> Цілеспрямований, креативний, відповідальний</p>
+        </section>
+
+        <section class="education">
+            <h2>Предмети </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Предмет</th>
+                        <th>Викладач</th>
+                        <th>Оцінка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Програмування GUI (Flutter)</td>
+                        <td>Дашкевич А.О.</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>Організація баз даних</td>
+                        <td>Мартиненко Г.Ю.</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>Математична логіка, теорія алгоритмів та структури даних</td>
+                        <td>Татарінова О.А.</td>
+                        <td>99</td>
+                    </tr>
+                     <tr>
+                        <td>Програмування комп'ютерної графіки</td>
+                        <td>Марусенко О.М.</td>
+                        <td>99</td>
+                    </tr>
+                     <tr>
+                        <td>Технології програмування</td>
+                        <td>Шаповалова Ма.Іг.</td>
+                        <td>99</td>
+                    </tr>
+                     <tr>
+                        <td>Іноземна мова</td>
+                        <td>Нетецька Т.М.</td>
+                        <td>99</td>
+                    </tr>
+                     <tr>
+                        <td>Правознавство</td>
+                        <td>Кузьменко О.В.</td>
+                        <td>99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="favorites">
+            <h2>Улюблені фільми / ТВ-шоу</h2>
+            <div class="movie-grid">
+                <a href="https://www.imdb.com/title/tt0133093/" target="_blank">
+                    <img src="images/movie1.jpg" alt="Матриця">
+                </a>
+                <a href="https://www.imdb.com/title/tt0088763/" target="_blank">
+                    <img src="images/movie2.jpg" alt="Назад у майбутнє">
+                </a>
+                <a href="https://www.imdb.com/title/tt0468569/" target="_blank">
+                    <img src="images/movie3.jpg" alt="Темний лицар">
+                </a>
+                <a href="https://www.imdb.com/title/tt0903747/" target="_blank">
+                    <img src="images/movie4.jpg" alt="Пуститися берега">
+                </a>
+                <a href="https://www.imdb.com/title/tt0898266/" target="_blank">
+                    <img src="images/movie5.jpg" alt="Теорія великого вибуху">
+                </a>
+            </div>
+        </section>
+
+        <section class="moods">
+            <h2>Мої настрої</h2>
+            <div class="mood-gallery">
+                <div class="mood-item">
+                    <img src="images/happy.jpg" alt="Щасливий">
+                    <p>Щасливий</p>
+                </div>
+                <div class="mood-item">
+                    <img src="images/sad.jpg" alt="Сумний">
+                    <p>Сумний</p>
+                </div>
+                <div class="mood-item">
+                    <img src="images/current.jpg" alt="Зараз">
+                    <p>Зараз</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <h2>Улюблена цитата</h2>
+            <blockquote class="centered-quote">
+                <p>"Знання — це сила."</p>
+                <cite>— <a href="https://uk.wikipedia.org/wiki/%D0%97%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F_%E2%80%94_%D1%81%D0%B8%D0%BB%D0%B0" target="_blank">Френсіс Бекон (Вікіпедія)</a></cite>
+            </blockquote>
+        </section>
+
+        <section class="location">
+            <h2>Моє місце народження: Лиман, Донецька область</h2>
+            <p> Лиман — це важливий залізничний вузол сходу України, який славиться своєю мальовничою природою. Місто оточене густими сосновими лісами та є своєрідними воротами до Національного природного парку «Святі Гори» і знаменитих Блакитних озер.</p>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Лиман,%20Донецька%20область&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="slideshow-section">
+            <h2> Рідне місто</h2>
+            <div class="slideshow-container">
+                <img id="slide-image" src="images/slide1.jpg" alt="Слайд 1">
+                <div class="slide-controls">
+                    <button onclick="prevSlide()">❮</button>
+                    <button onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
