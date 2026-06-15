@@ -8,20 +8,39 @@ const images = [
 
 let currentIndex = 0;
 
+let slideInterval;
+
 function nextSlide() {
     currentIndex = (currentIndex + 1) % images.length;    
     document.getElementById('slide-image').src = images[currentIndex];
+    resetInterval(); 
 }
 
 function prevSlide() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     document.getElementById('slide-image').src = images[currentIndex];
+    resetInterval(); 
 }
+
+
+function startInterval() {
+    slideInterval = setInterval(nextSlide, 7000);
+}
+
+function resetInterval() {
+    clearInterval(slideInterval); 
+    startInterval();             
+}
+
+startInterval();
+
+
+
+
 
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Перевіряємо збережену тему в localStorage
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
     body.classList.add('dark-theme');
