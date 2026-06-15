@@ -52,7 +52,6 @@ section {
     padding-bottom: 20px;
 }
 
-/* ФОТО ПРО МЕНЕ (Праворуч) */
 .profile-pic {
     float: right;
     width: 200px;
@@ -69,26 +68,25 @@ section {
     display: table;
 }
 
-/* ФІЛЬМИ (Картинки) */
-/* ФІЛЬМИ (В одну лінію, однаковий розмір) */
+
 .movie-grid {
     display: flex;
     gap: 15px;
-    flex-wrap: nowrap; /* Суворо забороняємо перенесення на новий рядок */
+    flex-wrap: nowrap; 
     justify-content: center;
-    overflow-x: auto; /* Додає горизонтальну прокрутку на мобільних телефонах */
-    padding-bottom: 15px; /* Місце для можливої смуги прокрутки */
+    overflow-x: auto; 
+    padding-bottom: 15px; 
 }
 
-/* Щоб посилання не стискалися, коли мало місця */
+
 .movie-grid a {
     flex: 0 0 auto; 
 }
 
 .movie-grid img {
-    width: 170px;  /* Фіксована ширина для всіх фото */
-    height: 250px; /* Фіксована висота для всіх фото */
-    object-fit: cover; /* Магія: картинки заповнять задані розміри без розтягування/сплющування */
+    width: 170px;  
+    height: 250px; 
+    object-fit: cover; 
     border-radius: 8px;
     transition: transform 0.3s;
 }
@@ -97,7 +95,6 @@ section {
     transform: scale(1.05);
 }
 
-/* ЦИТАТА (По центру) */
 .centered-quote {
     text-align: center;
     font-size: 1.5rem;
@@ -111,13 +108,12 @@ section {
     font-size: 1rem;
 }
 
-/* СЛАЙДЕР */
 #slide-image {
-    width: 100%;       /* Фото займає всю ширину контейнера */
-    height: 450px;     /* Жорстко фіксуємо висоту для всіх фото */
-    object-fit: cover;  /* Магія: фото акуратно обрізається, щоб заповнити рамку, не сплющуючись */
-    border-radius: 12px; /* Трохи заокруглені кути */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для ефекту "картки" */
+    width: 100%;      
+    height: 450px;     
+    object-fit: cover;  
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .slide-controls {
@@ -134,7 +130,6 @@ section {
     border-radius: 5px;
 }
 
-/* Таблиці */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -145,7 +140,7 @@ th, td {
     padding: 10px;
 }
 
-/* Адаптивність */
+
 @media (max-width: 600px) {
     .profile-pic {
         float: none;
@@ -154,33 +149,29 @@ th, td {
     }
 }
 
-/* МОЇ НАСТРОЇ (3 в одну лінію) */
 .mood-gallery {
     display: flex;
-    gap: 20px; /* Відстань між фотографіями */
-    flex-wrap: nowrap; /* Суворо забороняємо перенесення на новий рядок */
-    justify-content: center; /* Вирівнюємо всі 3 фото по центру сторінки */
-    overflow-x: auto; /* Для зручності на мобільних екранах */
+    gap: 20px; 
+    flex-wrap: nowrap; 
+    justify-content: center;
+    overflow-x: auto; 
     padding-bottom: 15px;
 }
 
-/* Щоб блоки з текстом і фото не стискалися */
 .mood-item {
     text-align: center;
     flex: 0 0 auto; 
 }
 
-/* Налаштування самих картинок настрою */
 .mood-item img {
-    width: 200px;  /* Ширина фото настрою */
-    height: 250px; /* Висота (можете змінити на 200px, якщо хочете квадратні) */
-    object-fit: cover; /* Обрізає зайве, не розтягуючи саме фото */
-    border-radius: 8px; /* Заокруглені кути, як у фільмів */
-    transition: transform 0.3s; /* Плавність для анімації */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легка тінь для краси */
+    width: 200px;  
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Ефект збільшення при наведенні мишкою (як у фільмах) */
 .mood-item img:hover {
     transform: scale(1.05);
 }
